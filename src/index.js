@@ -4,11 +4,17 @@ import ReactDOM from "react-dom";
 
 // Create a react component
 
+const getTime = () => {
+    return (new Date().toLocaleTimeString())
+
+}
+
 const App = () => {
   const buttonText = { text: "Click me" };
   return (
     <div>
-      <label className="label" for="name">
+    <h3>Current Time: {getTime()}</h3>
+      <label className="label" htmlFor="name">
         Enter name:
       </label>
       <input id="name" type="text" />
